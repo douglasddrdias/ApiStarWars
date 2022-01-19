@@ -1,40 +1,39 @@
 const Sequelize = require('sequelize')
 
-const PlanetasSchema
+const NavesSchema
  = {
-    name: 'Planetas',
+    name: 'Naves',
     schema: {
-        idPlaneta:{
+        IdNave:{
             type: Sequelize.INTEGER,
             require: true,
             primaryKey: true,
-            autoIncrement: true
         },
         nome: {
             type: Sequelize.STRING,
             require: true
         },
-        Rotacao:{
-            type: Sequelize.FLOAT,
+        Modelo:{
+            type: Sequelize.STRING,
             require: true
         },
-        Orbita:{
-            type: Sequelize.FLOAT,
-            require: true
-        },
-        Diametro:{
-            type: Sequelize.FLOAT,
-            require: true
-        },
-        Populacao: {
+        Passageiros:{
             type: Sequelize.INTEGER,
+            require: true
+        },
+        Carga:{
+            type: Sequelize.FLOAT,
+            require: true
+        },
+        Classe: {
+            type: Sequelize.STRING,
             require: true
         },        
     },
     options: {
-        tableName: 'Planetas',
+        tableName: 'Naves',
         freezeTableName: false,
         timestamps: false        
     }
 }
-module.exports = PlanetasSchema
+module.exports = NavesSchema

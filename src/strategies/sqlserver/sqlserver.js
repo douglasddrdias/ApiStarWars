@@ -31,6 +31,10 @@ class SqlServer extends ICrud {
             dialect: "mssql",
             // debug das operações
             logging: true,
+            quoteIdentifiers: false,
+            operatosAliases: false,
+            // desabilitar do sequelize criar a tabela
+            migration: false,
             ssl: process.env.SSL_DB,
         })
     }
